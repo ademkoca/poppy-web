@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Na serveru se 404 stranica prikazuje i za duboke putanje (npr. /a/b/c),
+       pa se relativne putanje računaju od korena sajta. Pri otvaranju sa diska (file://) ne radi ništa. */
+    if (location.protocol !== "file:") {
+      var base = document.createElement("base");
+      base.href = "/";
+      document.head.appendChild(base);
+    }
+  </script>
+  <title>Stranica nije pronađena · Poppy</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FBE3E8">
+  <link rel="icon" type="image/svg+xml" href="assets/mascot/poppy.svg">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skipToContent">Preskoči na sadržaj</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" data-i18n-attr="aria-label:a11y.home">
+        <span class="mascot logo__mascot"><img class="mascot__img" src="assets/mascot/poppy.svg" alt="" width="44" height="44"></span>
+        <span class="logo__text">Poppy</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main" class="not-found" tabindex="-1">
+    <div class="not-found__card">
+      <span class="mascot not-found__mascot"><img class="mascot__img" src="assets/mascot/poppy.svg" alt="" width="220" height="220"></span>
+      <p class="not-found__code">404</p>
+      <h1 class="not-found__title" data-i18n="notFound.title">Ups, ova stranica ne postoji</h1>
+      <p data-i18n="notFound.text">Poppy je svuda tražila, ali ovde nema ničega.</p>
+      <a class="btn btn--primary" href="index.html" data-i18n="notFound.cta">Nazad na početnu</a>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="footer-root"></footer>
+
+  <script src="config/site.js"></script>
+  <script src="i18n/sr.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/nutrition.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

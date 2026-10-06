@@ -1,0 +1,70 @@
+/*
+  POPPY: dizajn tokeni.
+  Ovo je JEDINO mesto gde se definišu boje, fontovi, radijusi, senke i razmaci.
+  Za promenu palete izmeni vrednosti u prvom bloku; ostatak sajta koristi semantičke tokene ispod.
+*/
+:root {
+  /* ---- Paleta brenda ---- */
+  --color-cream: #FFF8F3;      /* pozadina stranice */
+  --color-blush: #FBE3E8;      /* kartice, pozadine sekcija, pozadina dok se slika učitava */
+  --color-rose: #F2A7BB;       /* dekoracije, mašna, ivice. NE koristiti za tekst (nedovoljan kontrast) */
+  --color-raspberry: #8E2C4F;  /* tamni akcent: naslovi, linkovi, dugmad, fokus (7,7:1 na kremi) */
+  --color-cocoa: #3D2A33;      /* osnovni tekst (>12:1 na kremi) */
+  --color-white: #FFFFFF;
+
+  /* ---- Semantički tokeni ---- */
+  --bg: var(--color-cream);
+  --surface: var(--color-white);
+  --surface-soft: var(--color-blush);
+  --text: var(--color-cocoa);
+  --text-muted: #6B5560;       /* sekundarni tekst, ≈6,6:1 na kremi */
+  --heading: var(--color-raspberry);
+  --accent: var(--color-raspberry);
+  --accent-hover: #74203F;
+  --on-accent: var(--color-white);
+  --decor: var(--color-rose);
+  --border: #F3CCD6;
+  --focus: var(--color-raspberry);
+
+  /* ---- Tipografija ---- */
+  --font-script: "Dancing Script", "Brush Script MT", cursive;
+  --font-sans: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-h1: clamp(2.75rem, 8vw + 0.5rem, 5rem);
+  --fs-h2: clamp(2.25rem, 5vw + 0.5rem, 3.5rem);
+  --fs-h3: clamp(1.75rem, 3vw + 0.5rem, 2.25rem);
+  --lh-body: 1.6;
+
+  /* ---- Oblici i senke ---- */
+  --radius-sm: 10px;
+  --radius: 20px;
+  --radius-lg: 32px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 6px 24px rgba(142, 44, 79, 0.08);
+  --shadow-lift: 0 14px 36px rgba(142, 44, 79, 0.16);
+
+  /* ---- Razmaci i raspored ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --container: 1200px;
+  --gutter: 16px;
+  --header-h: 64px;
+
+  /* ---- Animacije ---- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.6s;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+    --header-h: 72px;
+  }
+}

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="poppy-title">
+  <!--
+    Poppy, maskota brenda (PLACEHOLDER ilustracija).
+    Zamenom OVOG fajla maskota se menja na celom sajtu (hero, header, footer, favicon, 404).
+    Treptanje je definisano ovde, a klimanje glavom je u css/main.css (.mascot) i radi i sa novom slikom.
+  -->
+  <title id="poppy-title">Poppy, mačka sa roze mašnicom</title>
+  <style>
+    .eye { transform-box: fill-box; transform-origin: center; animation: blink 5s infinite; }
+    @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+    @media (prefers-reduced-motion: reduce) { .eye { animation: none; } }
+  </style>
+
+  <!-- rep -->
+  <path d="M150 170c26-2 38-22 30-42-5-12-18-12-20-2" fill="none" stroke="#3D2A33" stroke-width="15" stroke-linecap="round"/>
+  <path d="M150 170c26-2 38-22 30-42-5-12-18-12-20-2" fill="none" stroke="#F6E6D8" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- telo -->
+  <path d="M52 186c-6-44 14-78 48-78s54 34 48 78z" fill="#F6E6D8" stroke="#3D2A33" stroke-width="4" stroke-linejoin="round"/>
+  <ellipse cx="100" cy="160" rx="24" ry="22" fill="#FFF8F3"/>
+  <!-- šapice -->
+  <ellipse cx="80" cy="185" rx="14" ry="9" fill="#F6E6D8" stroke="#3D2A33" stroke-width="4"/>
+  <ellipse cx="120" cy="185" rx="14" ry="9" fill="#F6E6D8" stroke="#3D2A33" stroke-width="4"/>
+
+  <!-- uši -->
+  <path d="M42 70 48 18l40 30z" fill="#F6E6D8" stroke="#3D2A33" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M51 58 54 32l20 15z" fill="#F2A7BB"/>
+  <path d="M158 70l-6-52-40 30z" fill="#F6E6D8" stroke="#3D2A33" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M149 58l-3-26-20 15z" fill="#F2A7BB"/>
+
+  <!-- glava -->
+  <ellipse cx="100" cy="80" rx="62" ry="50" fill="#F6E6D8" stroke="#3D2A33" stroke-width="4"/>
+
+  <!-- oči -->
+  <g class="eye">
+    <ellipse cx="76" cy="80" rx="8" ry="10" fill="#3D2A33"/>
+    <circle cx="79" cy="76" r="3" fill="#FFFFFF"/>
+  </g>
+  <g class="eye">
+    <ellipse cx="124" cy="80" rx="8" ry="10" fill="#3D2A33"/>
+    <circle cx="127" cy="76" r="3" fill="#FFFFFF"/>
+  </g>
+
+  <!-- obrazi -->
+  <ellipse cx="62" cy="98" rx="10" ry="6" fill="#F2A7BB" opacity="0.8"/>
+  <ellipse cx="138" cy="98" rx="10" ry="6" fill="#F2A7BB" opacity="0.8"/>
+
+  <!-- njuškica i usta -->
+  <path d="M94 92h12l-6 7z" fill="#E4879F" stroke="#3D2A33" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M100 99c0 6-4 9-9 8M100 99c0 6 4 9 9 8" fill="none" stroke="#3D2A33" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- brkovi -->
+  <g stroke="#3D2A33" stroke-width="2.5" stroke-linecap="round">
+    <path d="M44 88l-20-4M44 96l-20 2"/>
+    <path d="M156 88l20-4M156 96l20 2"/>
+  </g>
+
+  <!-- roze mašnica -->
+  <g transform="translate(116 38) rotate(-16) scale(0.74) translate(-128 -36)">
+    <path d="M128 36 100 20c-6-3-11 2-10 8l3 18c1 6 7 8 12 5z" fill="#F2A7BB" stroke="#8E2C4F" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M128 36l28-16c6-3 11 2 10 8l-3 18c-1 6-7 8-12 5z" fill="#F2A7BB" stroke="#8E2C4F" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M104 30l12 8M152 30l-12 8" stroke="#8E2C4F" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+    <rect x="119" y="27" width="18" height="18" rx="7" fill="#F7C3D1" stroke="#8E2C4F" stroke-width="3.5"/>
+  </g>
+</svg>

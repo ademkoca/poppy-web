@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
+    SEO i deljenje na mrežama.
+    Ovi tagovi su namerno u HTML-u (a ne u config-u): Facebook, Instagram, TikTok i Google
+    ih čitaju bez pokretanja JavaScript-a. Vidi README, odeljak "SEO i deljenje".
+  -->
+  <title>Poppy · Proteinski obroci i deserti</title>
+  <meta name="description" content="Poppy pravi proteinske obroke, deserte i šejkove: bagel, proju, gibanicu, kaše, palačinke i šejkove. Pogledaj proizvode i pronađi gde se mogu kupiti.">
+  <meta name="theme-color" content="#FBE3E8">
+
+  <!-- ZAMENI DOMEN: zameni https://www.poppy.rs pravim domenom (4 mesta u ovom bloku) -->
+  <link rel="canonical" href="https://www.poppy.rs/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Poppy">
+  <meta property="og:locale" content="sr_RS">
+  <meta property="og:title" content="Poppy · Proteinski obroci i deserti">
+  <meta property="og:description" content="Slani obroci, slatki doručci i šejkovi, spremljeni u malim serijama. Upoznaj Poppy!">
+  <meta property="og:url" content="https://www.poppy.rs/">
+  <meta property="og:image" content="https://www.poppy.rs/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Poppy maskota, mačka sa roze mašnicom, pored bagela, kaše i šejka">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Poppy · Proteinski obroci i deserti">
+  <meta name="twitter:description" content="Slani obroci, slatki doručci i šejkovi, spremljeni u malim serijama. Upoznaj Poppy!">
+  <meta name="twitter:image" content="https://www.poppy.rs/assets/images/og-image.jpg">
+  <!-- /ZAMENI DOMEN -->
+
+  <!-- Favicon je ista datoteka kao maskota: zamenom poppy.svg menja se i favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/mascot/poppy.svg">
+
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skipToContent">Preskoči na sadržaj</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#pocetna" data-i18n-attr="aria-label:a11y.home">
+        <span class="mascot logo__mascot"><img class="mascot__img" src="assets/mascot/poppy.svg" alt="" width="44" height="44"></span>
+        <span class="logo__text">Poppy</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-i18n-attr="aria-label:a11y.menuOpen">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="nav-menu" class="nav" data-i18n-attr="aria-label:a11y.mainNav">
+        <ul class="nav__list" role="list">
+          <li><a class="nav__link" href="#o-nama" data-i18n="nav.about"></a></li>
+          <li><a class="nav__link" href="#proizvodi" data-i18n="nav.products"></a></li>
+          <li><a class="nav__link" href="#lokacije" data-i18n="nav.locations"></a></li>
+          <li><a class="nav__link" href="#utisci" data-i18n="nav.testimonials"></a></li>
+        </ul>
+        <!-- Mesto za izbor jezika: prikazuje se automatski kad u config/site.js postoji više jezika -->
+        <div id="lang-switch" class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.language" hidden></div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <noscript><p class="noscript">Za prikaz sadržaja potrebno je da JavaScript bude uključen u pretraživaču.</p></noscript>
+
+    <!-- Sadržaj svih sekcija se generiše iz config/*.js pomoću js/render.js -->
+    <section id="pocetna" class="hero"><div id="hero-root" class="hero__inner"></div></section>
+    <section id="o-nama" class="section section--about" aria-labelledby="about-title"><div id="about-root"></div></section>
+    <section id="proizvodi" class="section section--products" aria-labelledby="products-title"><div id="products-root"></div></section>
+    <section id="lokacije" class="section section--locations" aria-labelledby="locations-title"><div id="locations-root"></div></section>
+    <section id="utisci" class="section section--testimonials" aria-labelledby="testimonials-title"><div id="testimonials-root"></div></section>
+  </main>
+
+  <footer class="site-footer" id="footer-root"></footer>
+
+  <!-- Redosled je bitan: config → prevodi → logika. Novi jezik: dodaj njegov fajl odmah posle sr.js. -->
+  <script src="config/site.js"></script>
+  <script src="config/products.js"></script>
+  <script src="config/locations.js"></script>
+  <script src="config/testimonials.js"></script>
+  <script src="i18n/sr.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/nutrition.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
